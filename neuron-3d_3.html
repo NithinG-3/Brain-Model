@@ -78,7 +78,7 @@ scene.background = new THREE.Color(0x060b18);
 scene.fog        = new THREE.FogExp2(0x060b18, 0.018);
 
 const camera = new THREE.PerspectiveCamera(40, 1, 0.1, 200);
-camera.position.set(0, 1, 18);
+camera.position.set(0, -3, 22);
 
 function resize() {
   renderer.setSize(wrap.clientWidth, wrap.clientHeight);
@@ -275,7 +275,7 @@ function dendBranch(start, dir, len, baseR, depth, spineProb = 0.7) {
   );
 
   // Dendritic spines — more frequent, varied sizes
-  const numSpines = Math.floor(4 + Math.random() * 5);
+  const numSpines = Math.floor(1 + Math.random() * 2);
   for (let i = 0; i < numSpines; i++) {
     if (Math.random() > spineProb) continue;
     const t       = 0.15 + Math.random() * 0.75;
